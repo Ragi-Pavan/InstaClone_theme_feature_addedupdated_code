@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ContextForTheme = React.createContext({
-  isDark: false,
+  isDark: true,
   toogleTheme: () => {},
 })
 

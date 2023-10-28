@@ -9,6 +9,7 @@
 .heade-container-dark {
   background-color: black;
   padding: 10px;
+  border-bottom: 1px solid white;
 }
 
 .button-for-search-close {
@@ -64,6 +65,7 @@
   width: 55px;
   height: 28px;
   flex-shrink: 0;
+  border-radius: 5px;
 }
 
 .heading {

@@ -19,6 +19,15 @@
   line-height: 24px; /* 150% */
 }
 
+.nameforuser-dark {
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 150% */
+}
+
 .profile-for-user {
   width: 96px;
   height: 96px;
@@ -38,8 +47,30 @@
   margin: 0px;
 }
 
+.posts-count-dark {
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  padding: 0px;
+  margin: 0px;
+}
+
 .posta {
   color: #262626;
+  padding: 0px;
+  margin: 0px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+}
+
+.posta-dark {
+  color: white;
   padding: 0px;
   margin: 0px;
   font-family: Roboto;
@@ -74,9 +105,32 @@
   line-height: 24px; /* 150% */
 }
 
+.user-id-dark {
+  color: white;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 0px;
+  line-height: 24px; /* 150% */
+}
+
 .user-bio {
   width: 90vw;
   color: #262626;
+  padding: 0px;
+  margin: 0px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+
+.user-bio-dark {
+  width: 90vw;
+  color: white;
   padding: 0px;
   margin: 0px;
   font-family: Roboto;
@@ -199,6 +253,10 @@
   align-items: center;
 }
 
+.main-for-profile-user-dark {
+  background-color: black;
+}
+
 @media (min-width: 768px) {
   .profile-container-for-lg {
     display: block;
@@ -254,6 +312,18 @@
     padding-bottom: 20px;
     margin: 0px;
   }
+
+  .nameforuser-dark {
+    color: white;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px; /* 100% */
+    padding: 0px;
+    padding-bottom: 20px;
+    margin: 0px;
+  }
   .posts-info-container {
     display: flex;
     flex-direction: row;
@@ -269,15 +339,34 @@
 
   .posts-count {
     color: #262626;
-
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 150% */
   }
+
+  .posts-count-dark {
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+  }
+
   .posta {
     color: #262626;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 5px;
+  }
+
+  .posta-dark {
+    color: white;
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
@@ -294,8 +383,27 @@
     font-weight: 500;
     line-height: 24px; /* 150% */
   }
+
+  .user-id-dark {
+    color: white;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+  }
   .user-bio {
     color: #262626;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    width: 60vw;
+  }
+
+  .user-bio-dark {
+    color: white;
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
@@ -342,6 +450,7 @@
   .hori {
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 100vw;
   }
   .list-for-post {
     margin: 25px;

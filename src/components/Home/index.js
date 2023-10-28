@@ -153,7 +153,6 @@ class Home extends Component {
 
   renderPostsView = () => {
     const {postsData, showHeaingforSearchResult, showSlick} = this.state
-
     if (postsData.length >= 1) {
       return (
         <ContexForTheme.Consumer>
@@ -187,20 +186,31 @@ class Home extends Component {
   }
 
   searchNotFoundView = () => (
-    <div className="search-not-found">
-      <h1 className="heading-for-search">Search Results</h1>
-      <div>
-        <img
-          className="no-search-image"
-          src="https://res.cloudinary.com/dytgpb4j5/image/upload/v1698138001/ja8hdtuomztjfuyqxmgw.jpg"
-          alt="search not found"
-        />
-        <div>
-          <h1 className="heeed">Search Not Found</h1>
-          <p className="papi">Try different keyword or search again</p>
-        </div>
-      </div>
-    </div>
+    <ContexForTheme.Consumer>
+      {value => {
+        const {isDark} = value
+        const containerColor = isDark
+          ? 'search-not-found-dark'
+          : 'search-not-found'
+
+        const HeadForSearch = isDark ? 'heeeddark' : 'heeed'
+        return (
+          <div className={containerColor}>
+            <div>
+              <img
+                className="no-search-image"
+                src="https://res.cloudinary.com/dytgpb4j5/image/upload/v1698138001/ja8hdtuomztjfuyqxmgw.jpg"
+                alt="search not found"
+              />
+              <div>
+                <h1 className={HeadForSearch}>Search Not Found</h1>
+                <p className="papi">Try different keyword or search again</p>
+              </div>
+            </div>
+          </div>
+        )
+      }}
+    </ContexForTheme.Consumer>
   )
 
   renderLoadingView = () => {
@@ -265,27 +275,38 @@ class Home extends Component {
 
   clickedonretry = () => {
     this.getpostsData()
-    this.updateSearchResult()
   }
 
   renderFailureView = () => (
-    <div className="failure-container">
-      <div>
-        <img
-          className="eoorr-image"
-          src="https://res.cloudinary.com/dytgpb4j5/image/upload/v1698141049/rqosmibopf2zr2mpi374.jpg"
-          alt="failure view"
-        />
-      </div>
-      <p className="err-msg-server">Something went wrong. Please try again</p>
-      <button
-        type="button"
-        className="retryButton"
-        onClick={this.clickedonretry}
-      >
-        Try Again
-      </button>
-    </div>
+    <ContexForTheme.Consumer>
+      {value => {
+        const {isDark} = value
+        const failureContainer = isDark
+          ? 'failure-container-dark'
+          : 'failure-container'
+
+        const ErrorMsg = isDark ? 'err-msg-server-dark' : 'err-msg-server'
+        return (
+          <div className={failureContainer}>
+            <div>
+              <img
+                className="eoorr-image"
+                src="https://res.cloudinary.com/dytgpb4j5/image/upload/v1698141049/rqosmibopf2zr2mpi374.jpg"
+                alt="failure view"
+              />
+            </div>
+            <p className={ErrorMsg}>Something went wrong. Please try again</p>
+            <button
+              type="button"
+              className="retryButton"
+              onClick={this.clickedonretry}
+            >
+              Try Again
+            </button>
+          </div>
+        )
+      }}
+    </ContexForTheme.Consumer>
   )
 
   renderView = () => {

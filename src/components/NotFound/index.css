@@ -9,15 +9,34 @@
   justify-content: center;
   align-items: center;
 }
+.main-content-dark {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
 
 .Not-found-image {
   width: 157px;
   height: 173px;
   flex-shrink: 0;
+  border-radius: 10px;
 }
 
 .head {
   color: #262626;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
+}
+
+.headDark {
+  color: white;
   text-align: center;
   font-family: Roboto;
   font-size: 20px;
