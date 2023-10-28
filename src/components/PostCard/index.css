@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+}
+
+.comment-container {
+  padding-top: 10px;
+}
+
+.iconzDark {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: white;
+}
+
+.button-for-comment {
+  background-color: coral;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.input-for-comment {
+  outline: none;
+  width: 50vw;
+  height: 25px;
+  border-radius: 5px;
+  border: 0.5px solid;
+}
+.list-item {
+  list-style-type: none;
+  margin: 5px;
+  border: 2px solid pink;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+}
+
+.list-item-dark {
+  list-style-type: none;
+  margin: 5px;
+  background: black;
+  border-radius: 5px;
+  border: 1.5px solid white;
+}
+
+.profilePicContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+
+.profilepic {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  border: 1.032px solid;
+  border-color: #e20337;
+}
+
+.user-name {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.1px;
+  margin-left: 10px;
+}
+
+.user-name-dark {
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.1px;
+  margin-left: 10px;
+}
+
+.informaton {
+  padding: 10px;
+}
+
+.Image {
+  width: 100%;
+  height: 375px;
+  flex-shrink: 0;
+}
+
+.iconz {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-between;
+}
+
+.likes-para {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.07px;
+  padding: 0px;
+  padding-top: 10px;
+  margin: 0px;
+}
+
+.likes-para-dark {
+  color: white;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.07px;
+  padding: 0px;
+  padding-top: 10px;
+  margin: 0px;
+}
+
+.discription {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.07px;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.discription-dark {
+  color: white;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.07px;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.spanl {
+  width: 312px;
+  color: #262626;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.1px;
+}
+
+.spanldark {
+  width: 312px;
+  color: white;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.1px;
+}
+
+.commnets {
+  color: #262626;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: -0.07px;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.commnetsdark {
+  color: white;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: -0.07px;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 5px;
+}
+
+.ul-for-comments {
+  margin: 0px;
+  padding: 0px;
+}
+
+.list-for-comment {
+  list-style-type: none;
+}
+
+.time {
+  color: #989898;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 160% */
+  letter-spacing: 0.05px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .profilepic {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .input-for-comment {
+    width: 25vw;
+  }
+  .Image {
+    width: 70vw;
+    height: 600px;
+    flex-shrink: 0;
+  }
+  .larger-one {
+    display: flex;
+    flex-direction: column;
+  }
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .likes-para {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+  .likes-para-dark {
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+
+  .discription {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+  }
+  .discription-dark {
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+  }
+  .spanl {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+
+  .spanldark {
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+  .commnets {
+    color: #262626;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .commnetsdark {
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .icons-container {
+    display: flex;
+    flex-direction: row;
+    width: 10vw;
+    justify-content: space-between;
+  }
+  .informaton {
+    padding: 20px;
+  }
+
+  .user-name-dark {
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.1px;
+    margin-left: 10px;
+  }
+  .time {
+    font-size: 14px;
+  }
+}
