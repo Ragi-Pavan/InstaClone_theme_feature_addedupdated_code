@@ -132,6 +132,31 @@
   color: white;
 }
 
+.humberber-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.moon {
+  margin: 0px;
+  padding: 0px;
+  padding-right: 20px;
+  color: black;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.moondark {
+  margin: 0px;
+  padding: 0px;
+  padding-right: 20px;
+  color: white;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
 .humberger-menu {
   display: flex;
   flex-direction: row;
@@ -218,6 +243,19 @@
 @media (min-width: 768px) {
   .heder-for-small {
     display: none;
+  }
+
+  .moondark-lg {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-size: 25px;
+  }
+  .moon-lg {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-size: 18px;
   }
   .header-for-larger-devices {
     display: block;

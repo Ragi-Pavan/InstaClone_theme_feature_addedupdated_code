@@ -173,7 +173,7 @@ class ReactSlick extends Component {
                   {this.renderViewBasedonApi()}
                 </div>
               </div>
-              <hr className="hr" />
+              {!isDark && <hr className="hr" />}
             </div>
           )
         }}

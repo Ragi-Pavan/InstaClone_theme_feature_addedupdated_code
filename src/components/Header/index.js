@@ -9,7 +9,9 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 
 import {IoCloseCircle} from 'react-icons/io5'
 
-import {FaSearch} from 'react-icons/fa'
+import {FaSearch, FaMoon} from 'react-icons/fa'
+
+import {BiSun} from 'react-icons/bi'
 
 import ContextForTheme from '../../Context/ContexForTheme'
 
@@ -61,7 +63,11 @@ class Header extends Component {
     return (
       <ContextForTheme.Consumer>
         {value => {
-          const {isDark} = value
+          const {isDark, toogleTheme} = value
+
+          const changeTheme = () => {
+            toogleTheme()
+          }
           const HeadContainer = isDark
             ? 'heade-container-dark'
             : 'heade-container'
@@ -85,10 +91,18 @@ class Header extends Component {
                         alt="website logo"
                       />
                     </Link>
-
                     <h1 className={Heading}>Insta Share</h1>
                   </div>
                   <div className="humberber-container" data-testid="Humberger">
+                    {isDark ? (
+                      <p className="moondark" onClick={changeTheme}>
+                        <BiSun />
+                      </p>
+                    ) : (
+                      <p className="moon" onClick={changeTheme}>
+                        <FaMoon />
+                      </p>
+                    )}
                     <p
                       className={HumberGerMenu}
                       onClick={this.clikedOnHumberberg}
@@ -207,7 +221,15 @@ class Header extends Component {
                         Profile
                       </button>
                     </Link>
-
+                    {isDark ? (
+                      <p className="moondark-lg" onClick={changeTheme}>
+                        <BiSun />
+                      </p>
+                    ) : (
+                      <p className="moon-lg" onClick={changeTheme}>
+                        <FaMoon />
+                      </p>
+                    )}
                     <button
                       type="button"
                       className="log-button"

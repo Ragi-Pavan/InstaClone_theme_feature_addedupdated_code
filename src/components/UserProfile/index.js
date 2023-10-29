@@ -101,6 +101,16 @@ class UserProfile extends Component {
 
           const UserIdBio = isDark ? 'user-bio-dark' : 'user-bio'
 
+          const GRID = isDark ? 'griddark' : 'grid'
+
+          const POSTPARA = isDark ? 'posts-para-dark' : 'posts-para'
+
+          const NoPostIcon = isDark ? 'iconxdark' : 'iconx'
+
+          const NoPIcon = isDark ? 'no-p-icon-dark' : 'no-p-icon'
+
+          const NPY = isDark ? 'npydark' : 'npy'
+
           return (
             <div className={MainProfile}>
               <div className="container-for-overall">
@@ -179,18 +189,17 @@ class UserProfile extends Component {
                 <hr className="hori" />
                 <div className="posts-container">
                   <div className="grids">
-                    <BsGrid3X3 className="grid" />
-                    <h1 className="posts-para">Posts</h1>
+                    <BsGrid3X3 className={GRID} />
+                    <h1 className={POSTPARA}>Posts</h1>
                   </div>
-
                   {lenghtofPosts === 0 ? (
-                    <div className="no-posts-view">
-                      <div className="iconx">
-                        <p className="no-p-icon">
+                    <div className="no-posts-view-for-user">
+                      <div className={NoPostIcon}>
+                        <p className={NoPIcon}>
                           <BiCamera />
                         </p>
                       </div>
-                      <h1 className="npy">No Posts</h1>
+                      <h1 className={NPY}>No Posts</h1>
                     </div>
                   ) : (
                     <div>
@@ -217,29 +226,57 @@ class UserProfile extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container-home" data-testid="loader">
-      <Loader type="TailSpin" color="#4094EF" height={50} width={50} />
-    </div>
+    <ContexForTheme.Consumer>
+      {value => {
+        const {isDark} = value
+        const LoaderContainer = isDark
+          ? 'loader-container-home-dark'
+          : 'loader-container-home'
+
+        return (
+          <div className={LoaderContainer} data-testid="loader">
+            <Loader
+              type="TailSpin"
+              color={isDark ? 'white' : '#4094EF'}
+              height={50}
+              width={50}
+            />
+          </div>
+        )
+      }}
+    </ContexForTheme.Consumer>
   )
 
   renderFailureView = () => (
-    <div className="failure-container">
-      <div>
-        <img
-          className="eoorr-image"
-          src="https://res.cloudinary.com/dytgpb4j5/image/upload/v1698141049/rqosmibopf2zr2mpi374.jpg"
-          alt="failure view"
-        />
-      </div>
-      <p className="err-msg-server">Something went wrong. Please try again</p>
-      <button
-        type="button"
-        className="retryButton"
-        onClick={this.getUserProfileData}
-      >
-        Try Again
-      </button>
-    </div>
+    <ContexForTheme.Consumer>
+      {value => {
+        const {isDark} = value
+        const failureContainer = isDark
+          ? 'failure-container-dark'
+          : 'failure-container'
+
+        const ErrorMsg = isDark ? 'err-msg-server-dark' : 'err-msg-server'
+        return (
+          <div className={failureContainer}>
+            <div>
+              <img
+                className="eoorr-image"
+                src="https://res.cloudinary.com/dytgpb4j5/image/upload/v1698141049/rqosmibopf2zr2mpi374.jpg"
+                alt="failure view"
+              />
+            </div>
+            <p className={ErrorMsg}>Something went wrong. Please try again</p>
+            <button
+              type="button"
+              className="retryButton"
+              onClick={this.getUserProfileData}
+            >
+              Try Again
+            </button>
+          </div>
+        )
+      }}
+    </ContexForTheme.Consumer>
   )
 
   renderView = () => {
